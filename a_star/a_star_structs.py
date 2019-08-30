@@ -18,6 +18,7 @@ class Node_astar:
 	def __init__(self, name, pos, adj_list):
 		#Elements of adj_list: touples - (neighbour_name, edge_weight)
 		self.neighbours = []
+		self.g =0
 
 		self.name = name
 		#preferably integer
@@ -33,7 +34,15 @@ class Node_astar:
 		nodes.append(self)
 		node_count = node_count+1
 
+	def getG(self, prev):
+		#prev = node with existing G
+		return prev.g + dist(self, prev)
+
+
 
 def heuristic(node, dest, multiplier = 1.5):
-	#d(node, dest)*multiplier
+	return dist(node, dest)*multiplier
+
+
+def dist(node1, node2):
 	pass
