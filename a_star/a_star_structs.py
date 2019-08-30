@@ -38,6 +38,9 @@ class Node_astar:
 		#prev = node with existing G
 		return prev.g + dist(self, prev)
 
+	def f(self):
+		return self.g + self.h
+
 
 
 def heuristic(node, dest, multiplier = 1.5):
