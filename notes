@@ -1,0 +1,35 @@
+ALGORITHMS:
+
+
+Prob based algorithms to be implemented:
+
+1) RRT
+2) RRT*
+3) Potential roadmap
+
+
+Graph/Grid based algorithms to be Implemented:
+
+1) A*
+2) Bug flood
+3) Trapezioidal Decomposition
+4) Visibility graph (not the optimizer)
+5) Grassfire (for comparison)
+
+Other Algorithms:
+
+1) Potential field
+
+----------------------------------------------------------
+
+LIBRARY MODULES
+
+End-planners:
+1) Dijkstra
+2) Belmann Ford
+3) Other?
+
+
+Optimizers:
+1) Visibility graph
+2) Quadratic
