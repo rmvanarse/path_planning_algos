@@ -20,6 +20,7 @@ Visibility graph
 
 #-----------------------------------------------------------
 import numpy
+#from shapely.geometry import Polygon
 
 
 """ 
@@ -46,5 +47,21 @@ Standard input format:
 Standard Output format:
 """
 
-def visibility_graph():
-	pass
+def visibility_graph(path, obstacle_list):
+	new_path =[]
+	new_path.append(path[0])
+
+	point1 = path[0]
+	point2 = path[1]
+
+	for i in range(1, len(path)):
+		point2 = path[i]
+		for obstacle in obstacle_list:
+			if obstacle.intersects(LineString(point1, point2)):
+				new_path.append(path[i-1])
+				point1 = path[i-1]
+				break
+			pass
+		pass
+	new_path.append(path[-1])
+	
